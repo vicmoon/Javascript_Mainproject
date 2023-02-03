@@ -1,5 +1,5 @@
 function computerPlay(){
-    let computerDisplay =document.querySelector("#computer");
+    let computerSelection=document.querySelector("#computer");
     const sides = [
         "Rock",
         "Paper",
@@ -10,40 +10,45 @@ function computerPlay(){
      console.log(sides[index]); 
 
      
-   computerDisplay.innerHTML= sides[index];
+   computerSelection.innerHTML= sides[index];
 }
-
-computerPlay();
-
 
 
 
 function playerPlay(){
-
     let choice = window.prompt("Enter your choice");
-    let playerDisplay = document.querySelector("#player");
-    playerDisplay.innerHTML=choice;
+    let playerSelection= document.querySelector("#player");
+    playerSelection.innerHTML=choice;
     
-    if (computerDisplay === playerDisplay){
-       alert("Same");}
-    
-    if (computerDisplay === "Rock" && playerDisplay === "Paper"){
-       alert('You win!');}
-
 }
 
-playerPlay()
 
- function oneRound(){
-    let computerDisplay =document.querySelector("#computer");
-    let playerDisplay = document.querySelector("#player");
 
-    if (computerDisplay === playerDisplay){
-       alert("Same");}
+ function oneRound(playerSelection, computerSelection){
+    computerSelection =computerPlay()
+    playerSelection = playerPlay()
     
-    if (computerDisplay === "Rock" && playerDisplay === "Paper"){
+    
+    if (computerSelection === "Rock" && playerSelection === "Paper"){
        alert('You win!');
     }
+    if (computerSelection ==="Rock" && playerSelection  === "Scissors"){
+      alert ('You lost!')
+    }
+    if (computerSelection === "Paper" && playerSelection === "Scissors"){
+    alert('You win')
+     }
+    if (computerSelection === "Paper" && playerSelection === "Rock"){
+    alert ('You lost!')
+    }
+    if (computerSelection === "Scissors" && playerSelection === "Rock"){
+    alert ('You won!')
+    }
+    if (computerSelection === "Scissors" && playerSelection === "Paper"){
+    alert ('You lost!')}
+
+   
+
 
  }
 
