@@ -8,8 +8,6 @@ function computerPlay(){
 
      const index= Math.floor(Math.random() * sides.length)
      console.log(sides[index]); 
-
-     
    computerSelection.innerHTML= sides[index];
 }
 
@@ -22,9 +20,7 @@ function playerPlay(){
     
 }
 
-
-
- function oneRound(playerSelection, computerSelection){
+ function oneRound(computerSelection, playerSelection){
     computerSelection =computerPlay()
     playerSelection = playerPlay()
     
@@ -47,10 +43,8 @@ function playerPlay(){
     if (computerSelection === "Scissors" && playerSelection === "Paper"){
     alert ('You lost!')}
 
-   
 
 
  }
-
 
 oneRound()
