@@ -5,6 +5,6 @@ body {
   background: black;
   color: aliceblue;
   border: 2px;
-  border-style: dotted;
+  border-style: dashed;
   max-width: 900px;
 }
