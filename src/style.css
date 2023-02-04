@@ -1,0 +1,10 @@
+body {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: black;
+  color: aliceblue;
+  border: 2px;
+  border-style: dotted;
+  max-width: 900px;
+}
