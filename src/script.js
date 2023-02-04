@@ -1,9 +1,9 @@
 function computerPlay() {
   const computerSelection = document.querySelector("#computer");
-  const sides = ["Rock", "Paper", "Scissors"];
-  const index = Math.floor(Math.random() * sides.length);
-  computerSelection.innerHTML = sides[index];
-  console.log(sides[index]);
+  const choice = ["Rock", "Paper", "Scissors"];
+  const index = Math.floor(Math.random() * choice.length);
+  computerSelection.innerHTML = choice[index];
+  console.log(choice[index]);
 }
 
 function playerPlay() {
@@ -20,6 +20,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 const result = document.querySelector("#result");
+result.innerHTML = "The round result should be here";
 const choice = window.prompt("Enter your choice : Paper, Rock or Scissors");
 const computerSelection = computerPlay();
 const playerSelection = playerPlay();
