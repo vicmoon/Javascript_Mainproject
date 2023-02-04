@@ -18,10 +18,10 @@ function playRound(playerSelection, computerSelection) {
 }
 
 const result = document.querySelector("#result");
-result.innerHTML = "The round result should be here";
 const choice = window.prompt("Enter your choice : Paper, Rock or Scissors");
 const computerSelection = computerPlay();
 const playerSelection = playerPlay();
+result.innerHTML = "The round result should be here";
 
 console.log((playerSelection, computerSelection));
 playRound();
