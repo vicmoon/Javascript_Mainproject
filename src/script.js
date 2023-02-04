@@ -14,8 +14,6 @@ function playerPlay() {
 function playRound(playerSelection, computerSelection) {
   if (computerSelection != playerSelection) {
     alert("Play again!");
-  } else {
-    alert("Same!");
   }
 }
 
