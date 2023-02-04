@@ -12,7 +12,7 @@ function playerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  if (computerSelection !== playerSelection) {
+  if (computerSelection != playerSelection) {
     alert("Play again!");
   } else {
     alert("Same!");
@@ -24,5 +24,5 @@ const choice = window.prompt("Enter your choice : Paper, Rock or Scissors");
 const computerSelection = computerPlay();
 const playerSelection = playerPlay();
 
-console.log(playRound((playerSelection, computerSelection)));
+console.log((playerSelection, computerSelection));
 playRound();
