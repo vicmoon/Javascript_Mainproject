@@ -1,15 +1,32 @@
 const result = document.querySelector("#result");
 const computerSelection = document.querySelector("#computer");
 const playerSelection = document.querySelector("#player");
-const choice = window.prompt("Enter your choice : Paper, Rock or Scissors");
-const computerSelection = computerPlay();
-const playerSelection = playerPlay();
+const possibleChoices = document.querySelectorAll("button");
+let playerChoice;
+
+possibleChoices.forEach((possibleChoice) =>
+  possibleChoice.addEventListener("click", (e) => {
+    playerChoice = e.target.id;
+    console.log(playerChoice);
+    playerSelection.innerHTML = playerChoice;
+    computerPlay()
+  })
+);
 
 function computerPlay() {
-  const choice = ["Rock", "Paper", "Scissors"];
-  const index = Math.floor(Math.random() * choice.length);
-  computerSelection.innerHTML = choice[index];
-  console.log(choice[index]);
+  const compChoice = Math.floor(Math.random() * 3) +1;
+  console.log(compChoice);
+
+  if (compChoice === 1) {
+    computerChoice = 'Paper'
+  }
+  if (compChoice === 2) {
+    computerChoice ='Rock'
+  }
+  if (compChoice === 3) {
+    computerChoice ='Scissors'
+  }
+  computerSelection.innerHTML =computerChoice; 
 }
 
 function playerPlay() {
