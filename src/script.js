@@ -1,8 +1,10 @@
-const result = document.querySelector("#result");
 const computerSelection = document.querySelector("#computer");
 const playerSelection = document.querySelector("#player");
 const possibleChoices = document.querySelectorAll("button");
-let playerChoice;
+const result = document.querySelector("#result");
+let playerChoice
+let computerChoice
+let resultFinal
 
 possibleChoices.forEach((possibleChoice) =>
   possibleChoice.addEventListener("click", (e) => {
@@ -10,6 +12,7 @@ possibleChoices.forEach((possibleChoice) =>
     console.log(playerChoice);
     playerSelection.innerHTML = playerChoice;
     computerPlay()
+    oneRound()
   })
 );
 
@@ -29,6 +32,30 @@ function computerPlay() {
   computerSelection.innerHTML =computerChoice; 
 }
 
-function playerPlay() {
-  playerSelection.innerHTML = choice;
+
+function oneRound(){
+if (playerChoice === computerChoice){
+  finalResult = 'Same same!'
+  }
+if (playerChoice === 'Rock' && computerChoice === 'Paper'){
+  finalResult = 'You win!'
+}
+if (playerChoice === 'Rock' && computerChoice === 'Scissors'){
+  finalResult = 'You win!'
+}
+if (playerChoice === 'Paper' && computerChoice === 'Scissors'){
+  finalResult = 'You lost!'
+}
+if (playerChoice === 'Paper' && computerChoice === 'Rock'){
+  finalResult = 'You lost!'
+}
+if (playerChoice === 'Scissors' && computerChoice === 'Rock'){
+  finalResult = 'You lost!'
+}
+if (playerChoice === 'Scissors' && computerChoice === 'Paper'){
+  finalResult = 'You win!'
+}
+
+result.innerHTML= finalResult
+
 }
