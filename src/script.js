@@ -2,19 +2,7 @@ const computerSelection = document.querySelector("#computer");
 const playerSelection = document.querySelector("#player");
 const possibleChoices = document.querySelectorAll("button");
 const result = document.querySelector("#result");
-let playerChoice
-let computerChoice
-let resultFinal
 
-possibleChoices.forEach((possibleChoice) =>
-  possibleChoice.addEventListener("click", (e) => {
-    playerChoice = e.target.id;
-    console.log(playerChoice);
-    playerSelection.innerHTML = playerChoice;
-    computerPlay()
-    oneRound()
-  })
-);
 
 function computerPlay() {
   const compChoice = Math.floor(Math.random() * 3) +1;
@@ -59,3 +47,13 @@ if (playerChoice === 'Scissors' && computerChoice === 'Paper'){
 result.innerHTML= finalResult
 
 }
+
+possibleChoices.forEach((possibleChoice) =>
+possibleChoice.addEventListener("click", (e) => {
+  playerChoice = e.target.id;
+  console.log(playerChoice);
+  playerSelection.innerHTML = playerChoice;
+  computerPlay()
+  oneRound()
+})
+);
