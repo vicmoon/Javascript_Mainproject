@@ -24,23 +24,17 @@ function computerPlay() {
 function oneRound(){
 if (playerChoice === computerChoice){
   finalResult = 'Same same!'
-  }
-if (playerChoice === 'Rock' && computerChoice === 'Paper'){
+  } else if (playerChoice === 'Rock' && computerChoice === 'Paper'){
   finalResult = 'You win!'
-}
-if (playerChoice === 'Rock' && computerChoice === 'Scissors'){
+} else if (playerChoice === 'Rock' && computerChoice === 'Scissors'){
   finalResult = 'You win!'
-}
-if (playerChoice === 'Paper' && computerChoice === 'Scissors'){
+} else if (playerChoice === 'Paper' && computerChoice === 'Scissors'){
   finalResult = 'You lost!'
-}
-if (playerChoice === 'Paper' && computerChoice === 'Rock'){
+} else if (playerChoice === 'Paper' && computerChoice === 'Rock'){
   finalResult = 'You lost!'
-}
-if (playerChoice === 'Scissors' && computerChoice === 'Rock'){
+} else if (playerChoice === 'Scissors' && computerChoice === 'Rock'){
   finalResult = 'You lost!'
-}
-if (playerChoice === 'Scissors' && computerChoice === 'Paper'){
+} else if (playerChoice === 'Scissors' && computerChoice === 'Paper'){
   finalResult = 'You win!'
 }
 
