@@ -31,7 +31,7 @@ if (playerChoice === computerChoice){
 } else if (playerChoice === 'Paper' && computerChoice === 'Scissors'){
   finalResult = 'You lost!'
 } else if (playerChoice === 'Paper' && computerChoice === 'Rock'){
-  finalResult = 'You lost!'
+  finalResult = 'You win!'
 } else if (playerChoice === 'Scissors' && computerChoice === 'Rock'){
   finalResult = 'You lost!'
 } else if (playerChoice === 'Scissors' && computerChoice === 'Paper'){
