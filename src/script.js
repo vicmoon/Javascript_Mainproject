@@ -3,6 +3,13 @@ const playerSelection = document.querySelector("#player");
 const possibleChoices = document.querySelectorAll("button");
 const result = document.querySelector("#result");
 
+function greeting(){
+   alert('Hello, let\'s start playing! Push a button :)');
+}
+greeting();
+
+
+
 
 function computerPlay() {
   const compChoice = Math.floor(Math.random() * 3) +1;
@@ -21,25 +28,46 @@ function computerPlay() {
 }
 
 
+let playerScore= 0;
+let computerScore =0;
+
 function oneRound(){
 if (playerChoice === computerChoice){
-  finalResult = 'Same same!'
-  } else if (playerChoice === 'Rock' && computerChoice === 'Paper'){
-  finalResult = 'You win!'
-} else if (playerChoice === 'Rock' && computerChoice === 'Scissors'){
-  finalResult = 'You win!'
-} else if (playerChoice === 'Paper' && computerChoice === 'Scissors'){
-  finalResult = 'You lost!'
-} else if (playerChoice === 'Paper' && computerChoice === 'Rock'){
-  finalResult = 'You win!'
-} else if (playerChoice === 'Scissors' && computerChoice === 'Rock'){
-  finalResult = 'You lost!'
-} else if (playerChoice === 'Scissors' && computerChoice === 'Paper'){
-  finalResult = 'You win!'
-}
+  finalResult = ' It\'s a draw';
+  } 
+  
+ if ((playerChoice === 'Paper' && computerChoice === 'Rock' )
+  ||(playerChoice === 'Rock' && computerChoice === 'Scissors')
+  || (playerChoice === 'Scissors' && computerChoice === 'Paper')
+ ){
+   finalResult = 'You win!';
+   playerScore++;
+ }
 
+ if ((playerChoice === 'Paper' && computerChoice === 'Scissors')
+ ||(playerChoice === 'Scissors' && computerChoice === 'Rock')
+ ||(playerChoice === 'Rock' && computerChoice === 'Paper')
+
+  ){
+    finalResult = 'You lost!'
+    computerScore++;
+  }
+   
+
+
+console.log(`Computer score ${computerScore}`);
+console.log(`Player score ${playerScore}`);
 result.innerHTML= finalResult
 
+}
+
+ let roundNumber = 0;
+
+ function roundsCount(){
+  roundNumber++;
+  alert(`Round  ${roundNumber}`)
+  if (roundNumber === 5)
+  alert("Time\'s up!")
 }
 
 possibleChoices.forEach((possibleChoice) =>
@@ -49,5 +77,8 @@ possibleChoice.addEventListener("click", (e) => {
   playerSelection.innerHTML = playerChoice;
   computerPlay()
   oneRound()
+  roundsCount()
 })
 );
+
+
