@@ -59,14 +59,12 @@ function playingRound(){
 
 }
 
-
-
  function roundsCount(){
   roundNumber++;
   alert(`Round  ${roundNumber}`)
   if (roundNumber === 5)
   alert("Time\'s up!")
- 
+
 }
 
 possibleChoices.forEach((possibleChoice) =>
