@@ -1,6 +1,8 @@
 body{
-  background: black;
+  background-color: black;
 }
+
+
 .game {
   text-align: center;
   margin: 0 auto;
